@@ -38,6 +38,11 @@ spec:
     grafana:
       defaultDashboardsEnabled: false
       adminPassword: flux
+      grafana.ini:
+        auth.anonymous:
+          enabled: true
+          org_name: Main Org.
+          org_role: Viewer
   postRenderers:
     - kustomize:
         patches:
